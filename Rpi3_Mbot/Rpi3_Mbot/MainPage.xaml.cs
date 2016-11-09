@@ -30,14 +30,23 @@ namespace Rpi3_Mbot
             Xbox.Button_X_Pressed += new Xbox.ListenerHandler(Button_X_Click);
             Xbox.Button_Y_Pressed += new Xbox.ListenerHandler(Button_Y_Click);
             Xbox.Button_RB_Pressed += new Xbox.ListenerHandler(Button_RB_Click);
+            Xbox.Button_RT_Pressed += new Xbox.ListenerHandler(Button_RB_Click);
 
-
+            //Left Stick for car controller
             Xbox.Leftstick_Stop += new Xbox.ListenerHandler(Leftstick_Stop_Click);
             Xbox.Leftstick_Up += new Xbox.ListenerHandler(Leftstick_Up_Click);
             Xbox.Leftstick_Down += new Xbox.ListenerHandler(Leftstick_Down_Click);
             Xbox.Leftstick_Left += new Xbox.ListenerHandler(Leftstick_Left_Click);
             Xbox.Leftstick_Right += new Xbox.ListenerHandler(Leftstick_Right_Click);
-           
+
+            //Adding support for Dpad for controller
+            Xbox.Dpad_Stop += new Xbox.ListenerHandler(Leftstick_Stop_Click);
+            Xbox.Dpad_Up += new Xbox.ListenerHandler(Leftstick_Up_Click);
+            Xbox.Dpad_Down += new Xbox.ListenerHandler(Leftstick_Down_Click);
+            Xbox.Dpad_Left += new Xbox.ListenerHandler(Leftstick_Left_Click);
+            Xbox.Dpad_Right += new Xbox.ListenerHandler(Leftstick_Right_Click);
+
+
             // Set LEDs
             InitLED();
             
